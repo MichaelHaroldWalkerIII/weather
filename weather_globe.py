@@ -21,7 +21,7 @@ import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Configuration
-PORT = 8080
+PORT = int(os.environ.get('PORT', '8081'))  # Default 8081 (8080 often used by code-servers)
 CACHE_DURATION = 300  # 5 minutes cache for weather data
 
 # Weather data cache
